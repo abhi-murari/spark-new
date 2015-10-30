@@ -1,0 +1,19 @@
+<ion-view title="Track Technician" class="map-container">
+    <ion-content class="has-header map-container">
+    <ui-gmap-google-map center="map.center" zoom="map.zoom" options="map.options" >
+    		 <ui-gmap-marker ng-repeat="marker in markers" 
+    		  coords="marker.coords" controls="" events="marker.events" idkey="marker.id">
+        </ui-gmap-marker>
+         <ui-gmap-marker
+    		  coords="current.coords" controls="" events="current.events" idkey="current.id">
+        </ui-gmap-marker>
+    </ui-gmap-google-map>
+     <div ng-cloak>
+        <ul>
+            <li>coords update ctr: {{coordsUpdates}}</li>
+            <li>dynamic move ctr: {{dynamicMoveCtr}}</li>
+        </ul>
+    </div>
+    </ion-content>
+
+</ion-view>
